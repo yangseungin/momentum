@@ -1,10 +1,10 @@
+import {getApiKey} from './key.js'
 const weather = document.querySelector(".js-weather .weather__text");
-
 
 const API_URL = "https://api.openweathermap.org/data/2.5/weather?";
 
 function getWeather(coords) {
-    const API_KEY = localStorage.getItem("API_KEY");    //api key 비공개
+    const API_KEY = getApiKey();    //api key 비공개
     fetch(
         `${API_URL}lat=${coords.lat}&lon=${coords.lon}&appid=${API_KEY}&units=metric`
     )

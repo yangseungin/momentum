@@ -1,9 +1,8 @@
-const API_KEY = "ad9e279f6585f9a34aca4fbde7cc1682";
+const API_KEY = "Your OpenWeatherMap Key";
 
 function getApiKey(){
+    localStorage.setItem("API_KEY",API_KEY);
     return API_KEY;
 }
-function init(){
-    localStorage.setItem("API_KEY",API_KEY);
-}
-init();
+
+export {API_KEY,getApiKey}
